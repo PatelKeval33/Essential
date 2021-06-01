@@ -4,41 +4,37 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${browser}    chrome
-${url}    https://www.flipkart.com/
+${url}    https://www.amazon.in/
 
 *** Test Cases ***
 Login Fipkart
-    Open Browser    https://www.flipkart.com/    chrome
-    Input Text    xpath://body/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/input[1]     8401608858
-    input text    xpath://input[@type="password"]     Tommy@88552233
-    click element    //button[@type="submit" and @class="_2KpZ6l _2HKlqd _3AWRsL"]
+    Open Browser    https://www.amazon.in/    chrome
     maximize browser window
-    Sleep    4s    
-    input text      xpath://input[@type="text"]          POCO X3 Pro
-    Sleep    4s    
-    Click Element    xpath://button[@type="submit" and @class="L0Z3Pu"]
-    Sleep    5s    
-    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div[2]/div[1]/div/section[2]/div[4]/div[1]/select/option[8]    
-    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div[2]/div[1]/div/section[2]/div[4]/div[1]/select/option[8]
-    Sleep    5s
-    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div[2]/div[1]/div/section[2]/div[4]/div[3]/select/option[1]    
-    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div[2]/div[1]/div/section[2]/div[4]/div[3]/select/option[1]    
-    Sleep    5s
+    Click Element    //*[@id="nav-signin-tooltip"]/a/span    
+    Sleep    2s    
+    Input Text    //*[@id="ap_email"]     8401608858
+    Click Element    //*[@id="continue"]    
+    input text    xpath://input[@type="password"]     Tommy@8523
+    Click Element    //*[@id="signInSubmit"]    
+    Sleep    2s    
+    input text      xpath://input[@type="text"]          New Apple iPhone 12 Pro Max (512GB) - Silver
+    Sleep    2s    
+    Click Element    //*[@id="nav-search-bar-form"]/div[3]/div
+    Sleep    2s
     @{parent_window}=   get window handles
-    wait until element is visible    xpath://*[@id="container"]/div/div[3]/div/div[2]/div[3]/div/div/div/a/div[2]/div[1]/div[1]   25s
-    run keyword and ignore error    click element    xpath://*[@id="container"]/div/div[3]/div/div[2]/div[3]/div/div/div/a/div[2]/div[1]/div[1]
+    wait until element is visible    //*[normalize-space()="New Apple iPhone 12 Pro Max (512GB) - Silver with Apple 20W USB-C Power Adapter"]    22s
+    run keyword and ignore error    click element    //*[normalize-space()="New Apple iPhone 12 Pro Max (512GB) - Silver with Apple 20W USB-C Power Adapter"]
     @{child_window}=   get window handles
     switch window    NEW
     ${title}=   get title
     log to console    ${title}
-    Sleep    5s   
-    Wait Until Element Is Visible    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]    
-    Click Element    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]
-    Wait Until Element Is Visible    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]   
-    Click Element    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]
-    Sleep    5s
-    Wait Until Element Is Visible    //div[normalize-space()="Remove"]    
-    Click Element    //div[normalize-space()="Remove"]
-    Wait Until Element Is Visible    //div[2][normalize-space()="Remove"]    
-    Click Element    //div[2][normalize-space()="Remove"]
-    Sleep    5s
+    Sleep    2s
+        Wait Until Element Is Visible    //*[@id="add-to-cart-button"]   
+    Click Element    //*[@id="add-to-cart-button"]
+    Sleep    2s
+    Wait Until Element Is Visible    //div[normalize-space()="Cart"]    
+    Click Element    //div[normalize-space()="Cart"]
+    Wait Until Element Is Visible    //*[@id="sc-item-C6f387394-4ea4-4f45-837f-60b72843b628"]/div[4]/div/div[1]/div/div/div[2]/div[1]/span[2]/span/input    
+    Click Element    //*[@id="sc-item-C6f387394-4ea4-4f45-837f-60b72843b628"]/div[4]/div/div[1]/div/div/div[2]/div[1]/span[2]/span/input
+    Sleep    2s         
+    Close Browser

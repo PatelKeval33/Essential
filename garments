@@ -14,7 +14,7 @@ Login Fipkart
     click element    //button[@type="submit" and @class="_2KpZ6l _2HKlqd _3AWRsL"]
     maximize browser window
     Sleep    5s    
-    input text      xpath://input[@type="text"]          T Shirts
+    input text      xpath://input[@type="text"]          T Shirt
     Sleep    2s    
     Click Element    xpath://button[@type="submit" and @class="L0Z3Pu"]
     Sleep    5s
