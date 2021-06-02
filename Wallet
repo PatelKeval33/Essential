@@ -24,8 +24,6 @@ Login Fipkart
     Sleep    2s   
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[3]/label/div[1]    
     Sleep    2s
-    # Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div/div    
-    # Sleep    2s 
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span    
     Sleep    2s     
     Click Element    //div[normalize-space()="SPIFFY"]     

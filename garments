@@ -24,12 +24,12 @@ Login Fipkart
     Sleep    2s    
     Click Element   xpath://input[@type="text" and @class="_34uFYj"]
     Sleep    2s
-    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span   
+`    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span   
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span    
     Sleep    2s    
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[1]/div[1]/div[22]   
     Sleep    2s    
-    Click Element    //div[normalize-space()="U.S. POLO ASSN."]    
+    Click Element    //div[normalize-space()="U.S. POLO ASSN."]`    
     Sleep    2s
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[3]/div/div[2]   
     Sleep    2s    
