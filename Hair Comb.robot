@@ -14,37 +14,39 @@ Login Fipkart
     click element    //button[@type="submit" and @class="_2KpZ6l _2HKlqd _3AWRsL"]
     maximize browser window
     Sleep    2s    
-    input text      xpath://input[@type="text"]          Slipper For Men
+    input text      xpath://input[@type="text"]          Hair Comb
     Sleep    2s    
     Click Element    xpath://button[@type="submit" and @class="L0Z3Pu"]
+    Sleep    2s 
+    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[2]/div[4]/div[1]/select/option[4]    
     Sleep    2s
-    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[2]/div[4]/div[1]/select/option[3]    
-    Sleep    2s    
-    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[2]/div[4]/div[3]/select/option[1]    
-    Sleep    2s   
+    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[2]/div[4]/div[3]/select/option[5]    
+    Sleep    2s
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[3]/label/div[1]    
     Sleep    2s
-    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div/div    
-    Sleep    2s 
+    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div    
+    Sleep    2s
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span    
-    Sleep    2s     
-    Click Element    //div[normalize-space()="PUMA"]     
+    Sleep    2s
+    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[1]/div[1]/div[17]    
+    Sleep    2s
+    Click Element    //div[normalize-space()="Pitambara"]    
+    Sleep    2s
+    Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[3]/div/div[2]   
     Sleep    2s
     @{parent_window}=   get window handles
-    wait until element is visible    //*[@id="container"]/div/div[3]/div/div[2]/div[2]/div/div[3]/div/div/a[1]   22s
-    run keyword and ignore error    click element    //*[@id="container"]/div/div[3]/div/div[2]/div[2]/div/div[3]/div/div/a[1]
+    wait until element is visible    //*[normalize-space()="Pitambara Neem Wood Combo Set of 7 Anti-Bacterial, Anti..."]   22s
+    run keyword and ignore error    click element    //*[normalize-space()="Pitambara Neem Wood Combo Set of 7 Anti-Bacterial, Anti..."]
     @{child_window}=   get window handles
     switch window    NEW
     ${title}=   get title
     log to console    ${title}
     Sleep    2s   
-    Wait Until Element Is Visible    //*[@id="swatch-5-size"]/a    
-    Click Element    //*[@id="swatch-5-size"]/a    
     Wait Until Element Is Visible    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]    
     Click Element    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]
     Wait Until Element Is Visible    //div[normalize-space()="Remove"]    
     Click Element    //div[normalize-space()="Remove"]
     Wait Until Element Is Visible    //div[2][normalize-space()="Remove"]    
     Click Element    //div[2][normalize-space()="Remove"]
-    Sleep    2s
+    Sleep    5s
     Close Browser

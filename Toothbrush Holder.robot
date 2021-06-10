@@ -14,12 +14,19 @@ Login Fipkart
     click element    //button[@type="submit" and @class="_2KpZ6l _2HKlqd _3AWRsL"]
     Maximize Browser Window
     Sleep    2s
-    input text      xpath://input[@type="text"]          Toothbrush
+    input text      xpath://input[@type="text"]          Toothbrush Holder
     Sleep    2s    
     Click Element    xpath://button[@type="submit" and @class="L0Z3Pu"]
+    Sleep    2s    
+    Click Element    //*[@id="container"]/div/div[3]/div[1]/div[1]/div/div/div/section[2]/div[4]/div[1]/select/option[2]    
+    Sleep    2s    
+    Click Element    //*[@id="container"]/div/div[3]/div[1]/div[1]/div/div/div/section[2]/div[4]/div[3]/select/option[1]    
+    Sleep    2s   
+    Click Element    //*[@id="container"]/div/div[3]/div[1]/div[1]/div/div/div/section[3]/label/div[1]    
+    Sleep    2s
     @{parent_window}=   get window handles
-    wait until element is visible    //*[normalize-space()="realme N1 Sonic Electric Toothbrush"]   22s
-    run keyword and ignore error    click element    //*[normalize-space()="realme N1 Sonic Electric Toothbrush"]
+    wait until element is visible    //*[normalize-space()="Romax New ToothBrush Holder/Tumbler Holder/Tumbler Stan..."]   22s
+    run keyword and ignore error    click element    //*[normalize-space()="Romax New ToothBrush Holder/Tumbler Holder/Tumbler Stan..."]
     @{child_window}=   get window handles
     switch window    NEW
     ${title}=   get title
@@ -32,4 +39,4 @@ Login Fipkart
     Wait Until Element Is Visible    //div[2][normalize-space()="Remove"]    
     Click Element    //div[2][normalize-space()="Remove"]
     Sleep    2s
-    # Close Browser
+    Close Browser

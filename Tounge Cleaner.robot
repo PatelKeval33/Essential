@@ -33,4 +33,4 @@ Login Fipkart
     Wait Until Element Is Visible    //div[2][normalize-space()="Remove"]    
     Click Element    //div[2][normalize-space()="Remove"]
     Sleep    2s
-    # Close Browser
+    Close Browser

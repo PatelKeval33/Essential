@@ -17,19 +17,19 @@ Login Fipkart
     input text      xpath://input[@type="text"]          T Shirt
     Sleep    2s    
     Click Element    xpath://button[@type="submit" and @class="L0Z3Pu"]
-    Sleep    5s
+    Sleep    2s
     Click Element    //*[@id="container"]/div/div[3]/div[1]/div[1]/div[2]/div/div/section[2]/div[4]/div[1]/select/option[4]    
     Sleep    2s    
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[3]/label/div[1]    
     Sleep    2s    
     Click Element   xpath://input[@type="text" and @class="_34uFYj"]
     Sleep    2s
-`    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span   
+    Wait Until Element Is Visible    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span   
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div[2]/span    
     Sleep    2s    
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[1]/div[1]/div[22]   
     Sleep    2s    
-    Click Element    //div[normalize-space()="U.S. POLO ASSN."]`    
+    Click Element    //*[normalize-space()="U.S. POLO ASSN."]  
     Sleep    2s
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[4]/div[2]/div/div[1]/div[3]/div/div[2]   
     Sleep    2s    
@@ -39,17 +39,21 @@ Login Fipkart
     Sleep    2s    
     Click Element    //*[@id="container"]/div/div[3]/div/div[1]/div/div/div/section[9]/div[2]/div/div[1]/div/label/div[2]     
     Sleep    2s    
+    Click Element    //div[normalize-space()="Color"]    
+    Sleep    2s
+    Click Element    //div[normalize-space()="Black"]    
+    Sleep    2s
     @{parent_window}=   get window handles
-    wait until element is visible    //*[@id="container"]/div/div[3]/div/div[2]/div[8]/div/div[3]/div/a/div[1]/div/div/div/img   25s
-    click element    //*[@id="container"]/div/div[3]/div/div[2]/div[8]/div/div[3]/div/a/div[1]/div/div/div/img
+    wait until element is visible    //*[normalize-space()="Printed Men Polo Neck Black T-Shirt"]   22s
+    click element    //*[normalize-space()="Printed Men Polo Neck Black T-Shirt"]
     @{child_window}=   get window handles
     switch window    NEW
     ${title}=   get title
     log to console    ${title}
-    Sleep    5s
+    Sleep    2s
     Wait Until Element Is Visible    //*[normalize-space()="XXL"]        
     Click Element    //*[normalize-space()="XXL"]    
-    Sleep    5s       
+    Sleep    2s       
     Wait Until Element Is Visible    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]    
     Click Element    //button[@class="_2KpZ6l _2U9uOA _3v1-ww"]
     Wait Until Element Is Visible    //div[normalize-space()="Remove"]    
